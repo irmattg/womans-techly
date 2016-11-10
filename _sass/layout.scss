@@ -1,0 +1,316 @@
+/* -- General Layout -- */
+
+/* Navigation */
+
+#nav, #nav-left {
+  a {
+    display: block;
+    color: $background-color;
+    padding: 0.33334em 0;
+    font-size: 1.5em;
+    font-weight: 400;
+    @media (min-width: 940px) {
+      font-size: 1em;
+    }
+    &:hover {
+      background-color: lighten($main-color, 5%);
+    }
+  }
+  span {
+      font-weight: 200;
+    }
+}
+
+#nav {
+  @include nav-position(right);
+}
+
+#nav-left {
+  @include nav-position(left);
+}
+
+/* Toggle class to open menu */
+
+#nav.menu-open {
+  @include open(-14rem);
+}
+
+#nav-left.menu-open-left {
+  @include open(14rem);
+}
+
+/* Header area + WT Image */
+
+.parallax_section{
+  margin-top: 230px;
+	height: 600px;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+  	background-position: 100% auto;
+		position:relative;
+}
+
+.parallax_image_first{
+	 background-image: url("../img/woc-img.jpg");
+}
+
+#break {
+  word-wrap: break-word;
+}
+
+header article {
+  font-size: 80px;
+   position: absolute;
+   top: 30%;
+   margin-top: -15px;
+   left: 0;
+   right: 0;
+   text-align: center;
+   color: #000;
+   font-family: "Fipps-Regular", sans-serif;
+}
+
+header article span {
+  color: #1D9CC7;
+}
+
+header article span.sourcepic {
+  font-size: 5px;
+  font-family: Verdana;
+  color: #000;
+}
+
+@font-face {
+  font-family: Fipps-Regular;
+  src: url(../font/fipps/Fipps-Regular.otf);
+}
+
+
+/* Separator after menu */
+
+#nav-list:after {
+  display: block;
+  content: '';
+  width: 5rem;
+  height: 1px;
+  margin: 23px auto;
+  background-color: $background-color;
+}
+
+/* Icon menu */
+
+#nav-menu {
+  @include icon-position(right);
+}
+
+#nav-menu-left {
+  @include icon-position(left);
+}
+
+#menu {
+  height: 4px;
+  width: 1.5em;
+  background-color: lighten($text-color, 35%);
+  margin-top: 8px;
+  &:after, &:before {
+    content: "";
+    display: block;
+    position: relative;
+    height: 4px;
+    width: 1.5em;
+    background-color: lighten($text-color, 35%);
+    transition: all 0.3s ease-in;
+  }
+  &:before {
+    top: -8px;
+  }
+  &:after {
+    top: 4px;
+  }
+  &.btn-close {
+    background: none;
+  }
+  &.btn-close:before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    background-color: $background-color;
+  }
+  &.btn-close:after {
+    top: -4px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background-color: $background-color;
+  }
+}
+
+/* Main content */
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  @media (min-width: 940px) {
+    position: static;
+  }
+}
+
+#container {
+	margin:0 auto;
+	max-width: 730px;
+	padding: 0 1.5rem;
+}
+
+#header {
+	text-align: center;
+  padding: 24px 0;
+  position: relative;
+  a {
+  	text-decoration: none;
+  	color: $text-color;
+  	display: inline-block;
+  }
+  img {
+    padding-top: 60px;
+  	max-height: 400px;
+  	margin: 0 auto;
+  	display: block;
+  }
+  p {
+  	font-family: Verdana, sans-serif; //Emerald logo font
+    font-weight: normal;
+  }
+  &:after {
+  	display: block;
+    content: '';
+    width: 5rem;
+    height: 1px;
+    margin: 23px auto;
+    background-color: lighten($text-color, 70%);
+  }
+}
+
+/* Posts */
+
+#posts {
+  li {
+    list-style-type: none;
+  }
+}
+
+#post-page {
+  margin-bottom: 1.5em;
+  @media (min-width: 940px) {
+      margin-bottom: 1.3334em;
+    }
+}
+
+.post+.post:before {
+    display: block;
+    content: '';
+    width: 5rem;
+    height: 1px;
+    margin: 23px auto;
+    background-color: lighten($text-color, 70%);
+  }
+
+.by-line {
+  display: block;
+  color: lighten($text-color, 25%);
+  line-height: 1.5em; /* 24px/16px */
+  margin-bottom: 1.5em; /* 24px/16px */
+  font-weight: 200;
+  @media (min-width: 940px) {
+    display: block;
+    color: lighten($text-color, 25%);
+    line-height: 1.3334em; /* 24px/18px */
+    margin-bottom: 1.3334em; /* 24px/18px */
+    font-weight: 200;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+          border-radius: 4px;
+}
+
+img[title="Emerald"] {
+    box-shadow: 0 2px 6px #ddd;
+  }
+
+code {
+  color: lighten($text-color, 35%);
+  background-color: lighten($background-color, 35%);
+}
+
+/* Set the vertical rhythm (and padding-left) for lists inside post content */
+
+.content ul, .content ol {
+  line-height: 1.5em; /* 24px/16px */
+  padding-left: 1.5em;
+  @media (min-width: 940px) {
+    line-height: 1.33334em; /* 24px/18px */
+  }
+}
+
+/* Pages */
+
+#page ul, #page ol {
+  padding-left: 1.5em;
+}
+
+/* Paginator */
+
+.pagination {
+  text-align: center;
+  margin: 2.666668em;
+  span {
+    background-color: darken($background-color, 5%);
+    color: #94c4d4;
+  }
+  a:hover {
+    background-color: lighten($main-color, 5%);
+  }
+}
+.page-item {
+  background-color: $background-color;
+  color: #94c4d4;
+  padding: 4px 8px;
+  font-weight: 400;
+  padding: 0.5em 1em;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+          border-radius: 4px;
+}
+
+/* Contact */
+
+section .wrapper input {
+  background-color: #211A1D;
+  color: #CAD5CA;
+  padding: 5px 10px 5px 10px;
+}
+
+input:hover {
+  color: #fff;
+}
+
+/* Footer */
+
+footer {
+  background-color: $background-color;
+  color: #000;
+  text-align: center;
+  padding: 0.6667em 0;
+}

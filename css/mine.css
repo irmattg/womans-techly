@@ -1,0 +1,40 @@
+.parallax_section{
+  margin-top: 230px;
+	height: 600px;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+  	background-position: 100% auto;
+		position:relative;
+}
+
+.parallax_image_first{
+	 background-image: url("../img/woc-img.jpg");
+}
+
+article {
+  font-size: 80px;
+   position: absolute;
+   top: 50%;
+   margin-top: -15px;
+   left: 0;
+   right: 0;
+   text-align: center;
+   color: #000;
+   font-family: "Fipps-Regular", sans-serif;
+}
+
+article span {
+  color: #1D9CC7;
+}
+
+article span.sourcepic {
+  font-size: 5px;
+  font-family: Verdana;
+  color: #000;
+}
+
+@font-face {
+  font-family: Fipps-Regular;
+  src: url(../font/fipps/Fipps-Regular.otf);
+}

@@ -1,0 +1,38 @@
+# Site settings
+title: WomansTechly | Weekly Blog
+description: "A blog by women for women."
+url: "http://www.womanstechly.com"
+author:
+  name: "Irma M."
+  email: "womanstechly@gmail.com"
+  url: "http://www.twitter.com/irmattg.com"
+
+# Build settings
+baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+gems:
+  - jekyll-paginate
+
+# Custom variables
+version: "1.1.0"
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false

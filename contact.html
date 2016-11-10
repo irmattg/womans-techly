@@ -1,0 +1,37 @@
+---
+layout: default
+title: Contact
+---
+
+<section id="contact-me" class="contact-me">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p>Feel free to ask me any questions, send feedback/suggestions or say hey!</p>
+    <form method="POST" action="https://formspree.io/womanstechy@gmail.com">
+      <div class="row">
+
+        <div class="col-md-4 form-group">
+          <label for="formGroupExampleInput">Name*</label>
+        <input type="text" class="form-control" name="name" id="formGroupExampleInput" placeholder="your name or twitter handle" required>
+      </div>
+
+      <div class="col-md-4 form-group">
+        <label for="formGroupExampleInput2">Email*</label>
+        <input type="email" class="form-control" name="_replyto" id="formGroupExampleInput2" placeholder="your email" required>
+      </div>
+
+
+      <div class="col-md-8 form-group">
+        <label for="formGroupExampleInput2">Message*</label>
+        <textarea rows="9" cols="40" name="message" class="form-control" placeholder="Looking forward to reading your message :)" required></textarea>
+      </div>
+
+      <div class="wrapper col-sm-12">
+      <!--Submit Button -->
+      <input type="submit" value="send" class="btn btn-lg send-button">
+      <input type="hidden" name="_next" value="//mywebsite.com/thanks.html" />
+      </div>
+    </div>
+</form>
+</div>
+</section>
