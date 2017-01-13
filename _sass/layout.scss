@@ -41,13 +41,21 @@
 
 /* Header area + WT Image */
 
+/* Div with main image hide on mobile */
+@media screen and (max-width: 480px) {
+    #main-head-img {
+        visibility: hidden;
+        height: 100%;
+    }
+}
+
 .parallax_section{
   margin-top: 230px;
 	height: 600px;
   	background-repeat: no-repeat;
   	background-attachment: fixed;
-  	background-size: cover;
-  	background-position: 100% auto;
+  	background-size: 100%;
+  	background-position: top left;
 		position:relative;
 }
 
@@ -55,12 +63,30 @@
 	 background-image: url("../img/woc-img.jpg");
 }
 
+.parallax_section2 {
+	height: 600px;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: 100%;
+  	background-position: top left;
+		position:relative;
+}
+
+.parallax_image_second{
+	 background-image: url("../img/woc-img2.jpg");
+}
+
+
 #break {
   word-wrap: break-word;
 }
 
+header p {
+  font-size: 10px;  
+}
+
 header article {
-  font-size: 80px;
+  font-size: 400%;
    position: absolute;
    top: 30%;
    margin-top: -15px;
@@ -194,6 +220,42 @@ header article span.sourcepic {
   }
 }
 
+#header2 {
+	text-align: center;
+  padding: 0px 0;
+  position: relative;
+  a {
+  	text-decoration: none;
+  	color: $text-color;
+  	display: inline-block;
+  }
+  img {
+    padding-top: 60px;
+  	max-height: 400px;
+  	margin: 0 auto;
+  	display: block;
+  }
+  p {
+  	font-family: Verdana, sans-serif; //Emerald logo font
+    font-weight: normal;
+  }
+  &:after {
+  	display: block;
+    content: '';
+    width: 5rem;
+    height: 1px;
+    margin: 23px auto;
+    background-color: lighten($text-color, 70%);
+  }
+}
+
+
+
+.resources ul {
+  padding-left: 20px
+
+}
+
 /* Posts */
 
 #posts {
@@ -298,19 +360,27 @@ code {
 
 section .wrapper input {
   background-color: #211A1D;
-  color: #CAD5CA;
+  color: #fff;
   padding: 5px 10px 5px 10px;
 }
 
-input:hover {
+section .wrapper input:hover {
   color: #fff;
+  background-color: #94c4d4;
+}
+
+input {
+  color: #000;
 }
 
 /* Footer */
 
 footer {
   background-color: $background-color;
+  font-size: 12px;
   color: #000;
   text-align: center;
   padding: 0.6667em 0;
+  margin-top: 100px;
+  margin-bottom: 122px;
 }
